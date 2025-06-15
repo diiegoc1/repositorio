@@ -45,7 +45,7 @@
 
   li :is(svg, h3) {
     opacity: 0.6;
-    transition: opacity calc(var(--speed) * 1.2) var(--easing);
+    transition: opacity calc(var(--speed) * 1.1) var(--easing);
   }
 
   li :is(a, p) {
@@ -58,7 +58,7 @@
 
   li img {
     filter: grayscale(1) brightness(1.5);
-    scale: 1.1;
+    scale: 1.2;
     transition-property: filter, scale;
     transition-duration: calc(var(--speed) * 1.2);
     transition-timing-function: var(--easing);
@@ -78,8 +78,8 @@
   }
 
   article {
-    /*     outline: 2px dashed canvasText; */
-    width: calc(var(--article-width) * 1.4px);
+    /*  outline: 2px dashed canvasText; */
+    width: calc(var(--article-width) * 1.1px);
     height: 100%;
     position: absolute;
     font-family: monospace;
@@ -110,9 +110,10 @@
     }
 
     p {
-      font-size: 13px;
+      text-align: left;
+      font-size: 12px;
       text-wrap: balance;
-      line-height: 1.25;
+      line-height: 1.5;
       --opacity: 0.8;
     }
 
@@ -155,7 +156,7 @@
   /* width is "ideal" 7 * 80px + 6 * gap + say 300px or whatever the ideal width is */
   :root {
     --gap: 8px;
-    --base: clamp(2rem, 8cqi, 80px);
+    --base: clamp(2rem, 5cqi, 80px);
     --easing: linear(
       0 0%,
       0.1538 4.09%,
@@ -293,7 +294,7 @@
 }
 /* ------------------------------------------- */
 
-@layer demo {
+@layer demo2 {
   .site-header {
     position: fixed;
     top: 1rem;
@@ -350,5 +351,3 @@
     gap: 1.5rem;
   }
 }
-
-
